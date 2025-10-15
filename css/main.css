@@ -1,0 +1,429 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+*{ margin:0px; padding:0px; font-family:'Noto Sans TC',Sans,Helvetica,Arial,'微軟正黑體'; font-weight:300; box-sizing: border-box; scroll-behavior: smooth; scroll-padding-top: 160px;}
+*:focus { outline: none; }
+::selection { background-color: #f34343; color: #fff;}
+a{ text-decoration: none; color:inherit;}
+body{ background-color: #0A1620;}
+img { border:0px; max-width: 100%;}
+
+/*header*/
+header{ position:fixed; top:0px; left:0px; width:100%; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; z-index:10; }
+header .Logo{ width: 148px; cursor: pointer;}
+header .MobMenuBtn{ display: none;}
+header nav{display: flex; gap: 10px;}
+header nav ul{ list-style-type: none; display: flex; gap: 10px;}
+header .Item{ color:#fff; font-size: 18px; padding: 10px 20px; position: relative; cursor: pointer;}
+header .Item a{ display: block;  font-weight: 500;}
+header .Item::after{ content: ''; display: block; position: absolute; left: 50%; right: 50%; bottom: -20px; border-top: 3px solid #fff; transition: .2s;}
+header .Item:hover::after{ left: 0; right: 0; transition: .2s;}
+header.Shrink{ padding: 10px 30px; background-color: rgba(0, 0, 0, .8); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); transition: .3s;}
+header.Shrink .Logo{ width: 80px; transition: .3s;}
+header.Shrink .Item:hover{ color: #ffcc4d;}
+header.Shrink .Item::after{ bottom: -22px; border-top: 0; height: 3px; background: linear-gradient(90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100%); transition: .2s;}
+
+/*Footer*/
+footer{ width: 100%; padding: 50px 30px 110px 30px; background-color: #111; color: #fff; text-align: center; font-size: 14px; position: relative;}
+footer .Social .Title{ font-size: 24px;}
+footer .Social .Links{ display: flex; justify-content: center; gap: 20px; padding: 20px 0;}
+footer .Social .Links .Item{ width: 40px; transition: .3s;}
+footer .Social .Links .Item:hover{ transform: scale(1.2); transition: .3s;}
+footer .Word{ font-size: 12px; line-height: 1.8; margin-top: 10px; max-width: 1000px; margin: 10px auto 20px auto;}
+footer .Copyrirght{ font-size: 12px; line-height: 1.6; margin-top: 10px;}
+
+main{}
+.Container{ width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 30px;}
+
+/*KV*/
+.KvBox{ color: #fff; text-align: center; position: relative;}
+.KvBox .VideoArea{ position: relative; width: 100%; height: 100%;}
+.KvBox .VideoArea video{ width: 100%; height: 100%; }
+.KvBox .Content{ padding: 30dvh 50px 20px 50px; display: flex; flex-direction: column; align-items: center; position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to bottom, rgba(10,22,32,0) 0%,rgba(10,22,32,1) 100%);}
+.KvBox .Content h1{ font-size: 20px; font-weight: 900; display: inline-block; color: #fff; text-shadow: 0 0 30px rgba(0,0,0,0.7); letter-spacing: 1.2rem;}
+.KvBox .Content h2{ font-size: 60px; font-weight: 900; display: inline-block; background: linear-gradient(to right, #FFCC4D, #FFECBB, #E6AB2C, #FFCC4D, #FFE8AD, #FFCC4D); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; }
+.KvBox .Content h2 br{ display: none;}
+.KvBox .Content h3{ font-size: 20px; font-weight: 400; display: inline-block; color: #fff; text-shadow: 0 0 30px rgba(0,0,0,0.7); letter-spacing: 0.5rem;}
+.KvBox .DownloadArea{ width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px 0; }
+.KvBox .DownloadArea .BtnLink{ width: 170px; display: flex; align-items: center; gap: 10px; padding: 10px 15px; background-color: #000; color: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); position: relative; transition: .3s;}
+.KvBox .DownloadArea .BtnLink .Icon{ width: 30px; height: 30px; flex-shrink: 0; transition: .3s;}
+.KvBox .DownloadArea .BtnLink:hover .Icon{ transform: scale(1.2); filter: drop-shadow(0px 0px 6px #fff); transition: .3s;}
+.KvBox .DownloadArea .BtnLink .Text{ font-size: 16px; color: #fff; text-align: left;}
+.KvBox .DownloadArea .BtnLink .Text span{ font-size: 12px; display: block;}
+.KvBox .DownloadArea .BtnLink::before{ content: ""; position: absolute; inset: 0; border-width: 1px; border-style: solid; border-color: transparent; border-radius: 10px; background-image: linear-gradient(to right, #fff, #fff, #fff, #fff); background-origin: border-box; mask-image: linear-gradient(white, white), linear-gradient(white, white); mask-clip: padding-box, border-box; mask-composite: exclude, add; pointer-events: none; transition: .3s;}
+.KvBox .DownloadArea .BtnLink:hover::before{ background-image: linear-gradient(to right, #5353F0, #BA51D1, #D3BF50, #4FF8FE); transition: .3s;}
+.KvBox .DownloadArea .BtnLink::after{ content: ""; opacity: 0; width: 86px; height: 14px; background: url(../images/img-btn_light.svg) no-repeat center; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%); pointer-events: none; transition: .3s;}
+.KvBox .DownloadArea .BtnLink:hover::after{ opacity: 1; transition: .3s;}
+.KvBox .DownloadArea.Fixed{ position: fixed; bottom: 0; left: 0; right: 0; flex-wrap: nowrap; z-index: 5;}
+.KvBox .DownloadArea.Fixed .BtnLink{ box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);}
+.KvBox .MoreBtn{ position: absolute; right: 30px; top: 50%; height: 100px; transform: translateY(-50%); display: flex; gap: 10px; flex-direction: column; align-items: center; justify-content: flex-end; cursor: pointer;}
+.KvBox .MoreBtn .Animation{ width: 30px; height: 30px; position: relative; border: 1px solid #FFCC4D; border-radius: 50%; animation: bounce 0.6s infinite alternate; }
+.KvBox .MoreBtn .Animation::after{ content: ''; display: block; width: 40px; height: 40px; background: url(../images/icon-bounce_arrow.png) no-repeat center; position: absolute; left: 50%; transform: translate(-50%, -30px); animation: bouncearrow 0.6s infinite alternate; }
+@keyframes bounce { 0% { width: 30px; height: 30px;} 100% { width: 16px; height: 16px;}}
+@keyframes bouncearrow { 0% { margin-top: 10px; } 100% { margin-top: 0px; } }
+.KvBox .MoreBtn span{ width: 35px; line-height: 1.2; color: #ffcc4d;}
+.KvBox .TopLight{ position: absolute; top: 0; left: 0; right: 0; margin: auto;}
+.KvBox .TopLight img{ animation: TopLight 3s infinite alternate;}
+@keyframes TopLight { 0% { width: 100%; } 100% { width: 30%;}}
+
+
+/* 圖片展示 */
+.GamePhoto{ padding: 150px 0 190px 0; background: url(../images/img-bg-grid.png) no-repeat top center; position: relative; margin-top: 20px;}
+.GamePhoto .Slide{ width: 100%; overflow-X: auto; position: relative; display: flex; gap:30px; padding: 0 100px; cursor: pointer; z-index: 1;}
+.GamePhoto .Card{ width: 600px; flex-shrink: 0; border-radius: 30px; background-color: rgba(255, 255, 255, .06); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); padding: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); position: relative; }
+.GamePhoto .Card .Photo{ border-radius: 20px; overflow: hidden; pointer-events: none;}
+.GamePhoto .Card .Text{ color: #fff; font-size: 16px; padding: 10px 10px 10px 20px; pointer-events: none;}
+.GamePhoto #gamePhotoSlide { scrollbar-width: none; -ms-overflow-style: none;}
+.GamePhoto #gamePhotoSlide::-webkit-scrollbar { display: none; }
+.GamePhoto .LeftImg{ position: absolute; top: -80px; left: 0; pointer-events: none;}
+.GamePhoto .RightImg{ position: absolute; top: -40px; right: 30px; pointer-events: none;}
+.GamePhoto .Light{ position: absolute; top: 100px; left: 0; pointer-events: none;}
+
+/* 遊戲介紹區域 */
+.Introduction{ padding: 100px 0; position: relative; margin-top: -100px;}
+.Introduction .Note{ max-width: 600px; position: relative; z-index: 1;}
+.Introduction .Note .MainTitle{ display: inline-block; border-radius: 5px; padding: 1px; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% ); position: relative; overflow: hidden;}
+.Introduction .Note .MainTitle h2{ font-size: 20px; font-weight: 900; color: #0A1620; display: inline-block; border-radius: 5px; border: 2px solid #0A1620; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% ); padding: 1px 6px;}
+.Introduction .Note .MainTitle:after{ content: ''; display: block; position: absolute; top: 0; left: 0; width: 20px; height: 100%; background-color: #fff; transform: skewX(-20deg); mix-blend-mode: overlay; animation: TitleLight 3s infinite;}
+@keyframes TitleLight { 0% {  left: -20px; } 40% {  left: 110%;} 100% {  left: 110%;}}
+.Introduction .Note .SubTitle{ font-size: 60px; font-weight: 700; color: #fff; margin-bottom: 20px; line-height: 1.2; padding-top: 20px;}
+.Introduction .Note .SubTitle span{ color: #ffcc4d; font: inherit;}
+.Introduction .Note .Text{ font-size: 16px; color: #fff; line-height: 2;}
+.Introduction .Note .Text p{ padding: 5px 0;}
+.Introduction .RightBoss{ position: absolute; top: 0; right: 0; pointer-events: none; animation: Octopus 2s infinite alternate; }
+@keyframes Octopus { 0% {  top: 0; }  100% {  top: 20px;}}
+.Introduction .Cards{ display: flex; flex-wrap: wrap; gap: 30px; padding: 80px 100px; position: relative; z-index: 1;}
+.Introduction .Cards .Item{ width: calc(50% - 15px); border-radius: 30px; position: relative; padding: 6px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition:.3s;}
+.Introduction .Cards .Item::before{ content: ""; position: absolute; inset: 0; border-width: 1px; border-style: solid; border-color: transparent; border-radius: 30px; background-image: linear-gradient(to right, #FFCC4D, #FFECBB, #E6AB2C, #FFCC4D, #FFE8AD, #FFCC4D); background-origin: border-box; mask-image: linear-gradient(white, white), linear-gradient(white, white); mask-clip: padding-box, border-box; mask-composite: exclude, add; pointer-events: none; transition: .3s;}
+.Introduction .Cards .Item .Photo{ border-radius: 25px; position: relative; padding: 2px; font-size: 0; }
+.Introduction .Cards .Item .Photo::before{ content: ""; position: absolute; inset: 0; border-width: 1px; border-style: solid; border-color: transparent; border-radius: 25px; background-image: linear-gradient(to right, #FFCC4D, #FFECBB, #E6AB2C, #FFCC4D, #FFE8AD, #FFCC4D); background-origin: border-box; mask-image: linear-gradient(white, white), linear-gradient(white, white); mask-clip: padding-box, border-box; mask-composite: exclude, add; pointer-events: none; transition: .3s;}
+.Introduction .Cards .Item .Photo img{ border-radius: 20px; }
+.Introduction .Cards .Item .Text{ font-size: 16px; color: #fff; line-height: 1.6; padding: 10px 60px; position: absolute; top: 8px; left: 8px; right: 8px; bottom: 8px; background: linear-gradient(to right, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 20%,rgba(0,0,0,0) 60%,rgba(0,0,0,0) 100%); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; border-radius: 21px; transition: .3s;}
+.Introduction .Cards .Item .Text .Title{ display: flex; align-items: center; gap: 10px; margin-bottom: 10px; text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);}
+.Introduction .Cards .Item .Text .Title h4{ font-size: 30px; font-weight: 700; color: #fff;}
+.Introduction .Cards .Item .Text .Word{ font-size: 16px; color: #fff; line-height: 1.8; max-width: 330px; text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);}
+.Introduction .Cards .Item:hover{ box-shadow: 0 0 30px 0 rgba(255,255,255.5); transition:.3s;}
+.Introduction .Cards .Item:hover::before{ background-image: linear-gradient(to right, #5353F0, #BA51D1, #D3BF50, #4FF8FE);}
+.Introduction .Cards .Item:hover .Photo::before{ background-image: linear-gradient(to right, #5353F0, #BA51D1, #D3BF50, #4FF8FE); transition:.3s;}
+.Introduction .Cards .Item:hover .Text{ padding: 10px; opacity: 0; transition: .3s;}
+
+/* 遊玩方式區域 */
+.Way{ padding: 100px 100px; position: relative; margin-bottom: 150px;}
+.Way .BgPhoto{ border-radius: 50px; padding: 150px 50px 650px 50px; background: no-repeat center center; background-size: cover; box-shadow: 0 0 100px 0 #FFCC4D; animation: WayLight 2s infinite alternate;  }
+@keyframes WayLight { 0% { box-shadow: 0 0 60px 0 #FFCC4D; } 100% { box-shadow: 0 0 150px 30px #FFCC4D; } }
+.Way .Note{}
+.Way .Note .MainTitle{ display: inline-block; border-radius: 5px; padding: 1px; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% ); position: relative; overflow: hidden; }
+.Way .Note .MainTitle h2{ font-size: 20px; font-weight: 900; color: #0A1620; display: inline-block; border-radius: 5px; border: 2px solid #0A1620; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% ); padding: 1px 6px;}
+.Way .Note .MainTitle:after{ content: ''; display: block; position: absolute; top: 0; left: 0; width: 20px; height: 100%; background-color: #fff; transform: skewX(-20deg); mix-blend-mode: overlay; animation: TitleLight 3s infinite;}
+.Way .Note .SubTitle{ font-size: 60px; font-weight: 700; color: #fff; margin-bottom: 20px; line-height: 1.2; padding-top: 20px;}
+.Way .Note .SubTitle span{ color: #ffcc4d; font: inherit;}
+.Way .Note .Text{ font-size: 16px; color: #fff; line-height: 2;}
+.Way .Note .Text p{ padding: 5px 0;}
+.Way .List{ margin: -550px -100px 0 -100px;}
+.Way .Slide{ display: flex; gap: 10px; padding: 0 calc(24dvw - 100px); overflow-x: auto; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; cursor: pointer;}
+.Way .Slide::-webkit-scrollbar { display: none;}
+.Way .Slide .Item{ width: 570px; flex-shrink: 0; border-radius: 40px; padding: 20px; background-color: rgba(255,255,255,.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
+.Way .Slide .StepArea{ display: flex; align-items: center; gap: 10px; font-size: 16px; color: #fff; font-weight: 900; padding: 0 20px 10px 20px;}
+.Way .Slide .StepArea span{ color: #ffcc4d; font-weight: 900;}
+.Way .Slide .Name{ color: #fff; font-size: 24px; font-weight: 900; padding: 0 20px;}
+.Way .Slide .Ps{ color: #fff; font-size: 18px; padding: 0 20px;}
+
+/* 魚類介紹區域 */
+.Species{ padding: 100px 0; position: relative;}
+.Species .Note{ max-width: 600px; }
+.Species .Note .MainTitle{ display: inline-block; border-radius: 5px; padding: 1px; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% ); position: relative; overflow: hidden; }
+.Species .Note .MainTitle h2{ font-size: 20px; font-weight: 900; color: #0A1620; display: inline-block; border-radius: 5px; border: 2px solid #0A1620; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% ); padding: 1px 6px;}
+.Species .Note .MainTitle:after{ content: ''; display: block; position: absolute; top: 0; left: 0; width: 20px; height: 100%; background-color: #fff; transform: skewX(-20deg); mix-blend-mode: overlay; animation: TitleLight 3s infinite;}
+.Species .Note .SubTitle{ font-size: 60px; font-weight: 700; color: #fff; margin-bottom: 20px; line-height: 1.2; padding-top: 20px;}
+.Species .Note .SubTitle span{ color: #ffcc4d; font: inherit;}
+.Species .Note .Text{ font-size: 16px; color: #fff; line-height: 2;}
+.Species .Note .Text p{ padding: 5px 0;}
+.Species .BossBox{ padding: 30px 0 50px 100px; overflow: hidden; position: relative;}
+.Species .BossBox .Group{ display: flex; align-items: center;}
+.Species .BossBox .DataArea{ width: 400px; display: flex; flex-direction: column; gap: 20px; padding: 20px; flex-shrink: 0;}
+.Species .BossBox .DataArea .Title{ font-size: 20px; font-weight: 700; color: #EB484B; }
+.Species .BossBox .DataArea .Name{ font-size: 60px; font-weight: 700; color: #fff; }
+.Species .BossBox .DataArea .NoteCard{ padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 20px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); display: flex; flex-direction: column; gap: 10px;}
+.Species .BossBox .DataArea .CardTitle{ font-size: 14px; color: #aaa; }
+.Species .BossBox .DataArea .Main{ font-size: 24px; font-weight: 700; color: #fff; }
+.Species .BossBox .DataArea .SubT{ font-size: 16px; color: #aaa; }
+.Species .BossBox .DataArea .Data{ display: flex; flex-wrap: wrap; gap: 10px 0;}
+.Species .BossBox .DataArea .Data .Item{ width: 50%; display: flex; align-items: center; gap: 3px;}
+.Species .BossBox .DataArea .Data .Item .Icon{ width: 20px; height: 20px; flex-shrink: 0;}
+.Species .BossBox .DataArea .Data .Item.BossArea01 .Icon{ background-image: url('../images/icon-species-area-01.svg'); }
+.Species .BossBox .DataArea .Data .Item.BossArea02 .Icon{ background-image: url('../images/icon-species-area-02.svg'); }
+.Species .BossBox .DataArea .Data .Item.BossArea03 .Icon{ background-image: url('../images/icon-species-area-03.svg'); }
+.Species .BossBox .DataArea .Data .Item.BossArea04 .Icon{ background-image: url('../images/icon-species-area-04.svg'); }
+.Species .BossBox .DataArea .Data .Item.None .Icon{ background-image: url('../images/icon-species-area-00.svg'); }
+.Species .BossBox .DataArea .Data .Item .Text{ font-size: 22px; color: #fff; font-weight: 700; }
+.Species .BossBox .DataArea .Data .Item.BossArea01 .Text{ text-shadow: 0 0 10px #F258B4, 0 0 10px #F258B4;}
+.Species .BossBox .DataArea .Data .Item.BossArea02 .Text{ text-shadow: 0 0 10px #EB7648, 0 0 10px #EB7648;}
+.Species .BossBox .DataArea .Data .Item.BossArea03 .Text{ text-shadow: 0 0 10px #48BDEB, 0 0 10px #48BDEB;}
+.Species .BossBox .DataArea .Data .Item.BossArea04 .Text{ text-shadow: 0 0 10px #EB484B, 0 0 10px #EB484B;}
+.Species .BossBox .DataArea .Data .Item.None .Text{ text-shadow: none; color: rgba(255,255,255,.2);}
+.Species .BossBox .DataArea .Data .Item .Text span{ font-size: 16px; padding-left: 5px;}
+.Species .BossBox .BossArea{ width: 100%; position: relative; border-radius: 30px; }
+.Species .BossBox .BossArea .Row{ width: 100%; display: flex; align-items: center; justify-content: space-between;}
+.Species .BossBox .BossArea .BgName{ width: 100%; padding: 0 10dvw; white-space: nowrap; pointer-events: none; user-select: none; text-align: center;}
+.Species .BossBox .BossArea .BgName span{ font-size: 20dvw; font-weight: 900; line-height: 1; background: linear-gradient(to top, #0A1620, #132736, #132736); background: -webkit-linear-gradient(to top, #0A1620, #132736, #132736); background-clip: text; -webkit-background-clip: text; color: transparent;}
+.Species .BossBox .BossArea .Photo{ width: 100%; display: flex; align-items: center; justify-content: center; flex-grow: 1;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -40%); animation: photoUpDown 1s infinite alternate; }
+@keyframes photoUpDown { 0% { transform: translate(-50%, -40%) translateY(0); } 100% { transform: translate(-50%, -40%) translateY(-2dvw); }}
+.Species .BossBox .Control{ position: absolute; top: 0; right: 0; width: calc(100dvw - 520px); height: 100%;}
+.Species .BossBox .Control .BackBtn{ padding: 10px 10px 20px 10px; border-radius: 100px; position: absolute; top: 50%; left: 30px; transform: translateY(-50%); font-size: 14px; color: #ffcc4d; font-weight: 500; gap: 5px; display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: .3s;}
+.Species .BossBox .Control .NextBtn{ padding: 10px 10px 20px 10px; border-radius: 100px; position: absolute; top: 50%; right: 30px; transform: translateY(-50%); font-size: 14px; color: #ffcc4d; font-weight: 500; gap: 5px; display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: .3s;}
+.Species .BossBox .Control .BackBtn:hover,
+.Species .BossBox .Control .NextBtn:hover{ background: rgba(255, 255, 255, .1); transition: .3s;}
+.Species .BossBox .Control .Points{ position: absolute; right: 30px; bottom: 50px;}
+.Species .BossBox .Control .Points .Num{ font-size: 24px; font-weight: 700; text-align: right; color: #fff; letter-spacing: 2px;}
+.Species .BossBox .Control .Points .Num span{ font-size: 24px; font-weight: 700; color: #ffcc4d;}
+.Species .BossBox .Control .Points .Schedule{ width: 200px; height: 6px; margin-top: 5px; display: flex; gap: 5px;}
+.Species .BossBox .Control .Points .Schedule .Item{ display: block; width: 20%; height: 100%; background: rgba(255, 255, 255, .3); border-radius: 3px;}
+.Species .BossBox .Control .Points .Schedule .Item.Focus{ background: #ffcc4d; transition: .3s;}
+.Species .Explain{ display: flex; gap: 30px; padding: 50px 30px 70px 30px;}
+.Species .Explain .Card{ flex: 1;}
+.Species .Explain .Card .Bg{}
+.Species .Explain .Card .Img{ margin-top: -470px;}
+.Species .Explain .Card .Note{ font-size: 20px; font-weight: 700; padding: 10px 20px 0 20px;}
+.Species .Explain .Card .Note h4{  font-size: 20px; color: #fff; padding-bottom: 10px;}
+.Species .Explain .Card .Note p{ font-size: 14px; color: #fff; line-height: 1.8;}
+.Species .FishSlide{ overflow: hidden; width: 100%; height: 100px; position: relative; }
+.Species .FishSlide .Slide{ display: flex; gap: 40px; flex-direction: row; white-space: nowrap; will-change: transform; transition: none;}
+.Species .FishSlide .Slide .Fish{ width: 100px; height: 100px; flex-shrink: 0;}
+
+/* 玩家評語區域 */
+.Comment{ padding: 100px 0 0 0; position: relative; background: linear-gradient(to right, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0) 100%);}
+.Comment::before{ content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% );}
+.Comment::after{ content: ''; display: block; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% );}
+.Comment .Note{ margin-bottom: 50px;}
+.Comment .Note .MainTitle{ display: inline-block; border-radius: 5px; padding: 1px; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% ); position: relative; overflow: hidden; }
+.Comment .Note .MainTitle h2{ font-size: 20px; font-weight: 900; color: #0A1620; display: inline-block; border-radius: 5px; border: 2px solid #0A1620; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% ); padding: 1px 6px;}
+.Comment .Note .MainTitle:after{ content: ''; display: block; position: absolute; top: 0; left: 0; width: 20px; height: 100%; background-color: #fff; transform: skewX(-20deg); mix-blend-mode: overlay; animation: TitleLight 3s infinite;}
+.Comment .Note .SubTitle{ font-size: 60px; font-weight: 700; color: #fff; margin-bottom: 20px; line-height: 1.2; padding-top: 20px;}
+.Comment .Note .SubTitle span{ color: #ffcc4d; font: inherit;}
+.Comment .Note .Text{ font-size: 16px; color: #fff; line-height: 2;}
+.Comment .Note .Text p{ padding: 5px 0;}
+.Comment .CommentBox{ display: flex; flex-wrap: wrap; align-items: flex-start; gap: 22px;}
+.Comment .CommentBox .Item{ width: calc(33.33% - 15px); background-color: rgba(0, 0, 0, 0.15); padding: 20px; border-radius: 20px; display: flex; gap: 20px; transition: .3s;}
+.Comment .CommentBox .Item .PhotoArea .Photo{ width: 100px; height: 100px; border-radius: 50%; overflow: hidden;}
+.Comment .CommentBox .Item .PhotoArea .Source{ width: 100%; text-align: right; margin-top: -25px;}
+.Comment .CommentBox .Item .PhotoArea .StarArea{ display: flex; align-items: center; justify-content: center; gap: 1px; margin-top: 5px;}
+.Comment .CommentBox .Item .InfoArea .Name{ font-size: 24px; color: #ffcc4d; font-weight: 700; margin-bottom: 10px;}
+.Comment .CommentBox .Item .InfoArea .Text{ font-size: 15px; color: #fff; line-height: 1.8;}
+.Comment .CommunityBox{ display: flex; align-items: center; justify-content: center; gap: 20px; padding-top: 50px;}
+.Comment .CommunityBox .LinkArea{ text-align: center;}
+.Comment .CommunityBox .LinkArea h3{ color: #fff; font-size: 20px;}
+.Comment .CommunityBox .LinkArea .Links{ display: flex; gap: 10px; padding-top: 20px;}
+.Comment .CommunityBox .LinkArea .Links .Item{ display: block; font-size: 0; transition: .3s;}
+.Comment .CommunityBox .LinkArea .Links .Item:hover{ transform: scale(1.1);}
+.Comment .CommunityBox .LinkArea .Links .Item img{ width: 50px;}
+.Comment .CommunityBox .Photo{ height: 280px; overflow: hidden;}
+
+/* 常見問題區域 */
+.QA{ padding: 100px 0 250px 0; position: relative; background: url('../images/img-qa-bg.png') center bottom no-repeat; background-size: 100% auto; overflow: hidden;}
+.QA .Note{ padding-bottom: 30px;}
+.QA .Note .MainTitle{ display: inline-block; border-radius: 5px; padding: 1px; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% ); position: relative; overflow: hidden; }
+.QA .Note .MainTitle h2{ font-size: 20px; font-weight: 900; color: #0A1620; display: inline-block; border-radius: 5px; border: 2px solid #0A1620; background: linear-gradient( 90deg, #FFCC4D 0%, #FFECBB 20%, #E6AB2C 40%, #FFCC4D 60%, #FFE8AD 80%, #FFCC4D 100% ); padding: 1px 6px;}
+.QA .Note .MainTitle:after{ content: ''; display: block; position: absolute; top: 0; left: 0; width: 20px; height: 100%; background-color: #fff; transform: skewX(-20deg); mix-blend-mode: overlay; animation: TitleLight 3s infinite;}
+.QA .Note .SubTitle{ font-size: 60px; font-weight: 700; color: #fff; margin-bottom: 20px; line-height: 1.2; padding-top: 20px;}
+.QA .Note .SubTitle span{ color: #ffcc4d; font: inherit;}
+.QA .Note .Text{ font-size: 16px; color: #fff; line-height: 2;}
+.QA .Note .Text p{ padding: 5px 0;}
+.QA .List{ display: flex; flex-wrap: wrap; gap: 20px; padding-top: 20px; }
+.QA .List .Item{ width: calc(50% - 10px); padding: 25px 25px; background-color: rgba(255, 255, 255, 0.1); border-radius: 20px; border: 1px solid transparent; position: relative; overflow: hidden; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: .3s;}
+.QA .List .Item .Question{ font-size: 30px; font-weight: 700; color: #fff; margin-bottom: 10px;}
+.QA .List .Item .Answer{ font-size: 16px; color: #fff; line-height: 1.8; display: flex;}
+.QA .List .Item .Answer::before{ content: "答："; color: #fff;}
+.QA .List .Item .Num{ position: absolute; right: 30px; bottom: -25px; font-size: 190px; font-style: italic; line-height: 1; font-weight: 900; color: rgba(255, 255, 255, 0.1); pointer-events: none; user-select: none;}
+.QA .List .Item:hover{ background: rgba(255, 255, 255, 0.15); border: 1px solid #ffcc4d; box-shadow: 0 0 20px 0 #ffcc4d; transition: .3s;}
+.QA .List .Item:hover .Question{ color: #ffcc4d;}
+.QA .Fish01{ position: absolute; top: 200px; left: 50%; transform: translateX(-800px); z-index: 1; pointer-events: none; user-select: none; }
+.QA .Fish01 img{ width: 100%; height: auto; animation: Fish01 10s linear infinite;}
+@keyframes Fish01 { 0% { transform: translateX(-20px) translateY(0) rotate(0deg); } 50% { transform: translateX(20px) translateY(-10px) rotate(10deg); } 100% { transform: translateX(-20px) translateY(0) rotate(0deg); }}
+.QA .Fish02{ position: absolute; top: 100px; right: 0; z-index: 1; pointer-events: none; user-select: none; }
+.QA .Fish02 img{ width: 100%; height: auto; animation: Fish02 8s linear infinite;}
+@keyframes Fish02 { 0% { transform: translateY(0); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0); }}
+.QA .Fish03{ position: absolute; bottom: -120px; left: 0; z-index: 1; pointer-events: none; user-select: none; }
+.QA .Fish03 img{ width: 100%; height: auto; animation: Fish03 10s linear infinite;}
+@keyframes Fish03 { 0% { transform: translateY(0) } 50% { transform: translateY(-20px)} 100% { transform: translateY(0) }}
+.QA .Fish04{ position: absolute; bottom: 120px; left: 50%; transform: translateX(480px); z-index: 1; pointer-events: none; user-select: none; }
+.QA .Fish04 img{ width: 100%; height: auto; animation: Fish04 8s linear infinite;}
+@keyframes Fish04 { 0% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-10px) rotate(15deg); } 100% { transform: translateY(0) rotate(0deg); }}
+
+
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+*{ font-weight: 500;;}
+/*Header*/
+header{ padding: 0; height: 80px;}
+header .Logo{ padding: 10px; width: 100px;}
+header .MobMenuBtn{ display: block; width: 80px; height: 80px; padding: 27px 24px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;}
+header .MobMenuBtn span{ display: block; height: 3px; background-color: #fff; border-radius: 5px; transition: .5s;}
+header .MobMenuBtn.Open span:nth-child(1){ transform: translateY(11px) rotate(135deg);}
+header .MobMenuBtn.Open span:nth-child(2){ transform: translateY(0px) rotate(45deg);}
+header .MobMenuBtn.Open span:nth-child(3){ transform: translateY(-11px) rotate(135deg);}
+header nav{ display: none;}
+header nav.Open{ display: flex; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background-color: rgba(0, 0, 0, .8); text-align: center; padding-bottom: 20px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border-radius: 0 0 20px 20px;}
+header nav ul{ flex-direction: column; gap: 0; }
+header:has(nav.Open){ background-color: rgba(0, 0, 0, .8);}
+header .Item:hover::after{ display: none;}
+header.Shrink{ padding-right: 0;}
+
+/*KV*/
+.KvBox .MoreBtn{ display: none;}
+.KvBox .Content { position: relative; padding: 4dvh 30px 20px 30px; }
+.KvBox .VideoArea::after{ content: ''; display: block; position: absolute; left: 0; bottom: 0; right: 0; height: 40%; background: linear-gradient(to bottom, rgba(10, 22, 32, 0) 0%, rgba(10, 22, 32, 1) 100%);}
+
+/* 遊戲介紹區域 */
+.Introduction{ padding: 50px 0 0 0 ;}
+.Introduction .Cards{ padding: 50px 30px; gap: 10px;}
+.Introduction .Cards .Item{ width: calc(50% - 5px);}
+.Introduction .Cards .Item .Text{ padding: 10px;}
+.Introduction .RightBoss{ opacity: .2;}
+
+/* 遊玩方式區域 */
+.Way{ padding: 30px; margin-bottom: 50px;}
+.Way .List{ margin: -550px -30px 0 -30px;}
+
+/* 魚類介紹區域 */
+.Species .Note{ max-width: 100%;}
+.Species .BossBox{ padding: 50px 30px;}
+.Species .BossBox .DataArea{ width: 320px; padding: 0;}
+.Species .BossBox .DataArea .SubT{ font-size: 14px;}
+.Species .BossBox .DataArea .Data .Item .Text{ font-size: 18px;}
+.Species .BossBox .BossArea .BgName{}
+.Species .Explain .Card .Img{ margin-top: -80%;}
+.Species .BossBox .Control{ width: calc(100dvw - 370px);}
+.Species .BossBox .BossArea .Photo{ height: 100%;}
+.Species .BossBox .BossArea .Photo img{ height: 100%;}
+
+/* 玩家評語區域 */
+.Comment .CommentBox .Item{ width: calc(50% - 15px);}
+
+/* 常見問題區域 */
+.QA .Fish01{ width: 110px; left: -10px; top: 530px; transform: none;}
+.QA .Fish02{ width: 200px; top: 220px; opacity: 0.5; z-index: -1;}
+.QA .Fish03{ width: 250px; bottom: 50px;}
+.QA .Fish04{ right: -70px; transform: none; bottom: 160px; left: auto;}
+
+}
+
+@media screen and (max-width:767px) {
+*{ font-weight: 500;;}
+/*Header*/
+header{ padding: 0; height: 80px;}
+header .Logo{ padding: 10px; width: 100px;}
+header .MobMenuBtn{ display: block; width: 80px; height: 80px; padding: 27px 24px; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;}
+header .MobMenuBtn span{ display: block; height: 3px; background-color: #fff; border-radius: 5px; transition: .5s;}
+header .MobMenuBtn.Open span:nth-child(1){ transform: translateY(11px) rotate(135deg);}
+header .MobMenuBtn.Open span:nth-child(2){ transform: translateY(0px) rotate(45deg);}
+header .MobMenuBtn.Open span:nth-child(3){ transform: translateY(-11px) rotate(135deg);}
+header nav{ display: none;}
+header nav.Open{ display: flex; flex-direction: column; position: absolute; top: 80px; left: 0; right: 0; background-color: rgba(0, 0, 0, .8); text-align: center; padding-bottom: 20px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border-radius: 0 0 20px 20px;}
+header nav ul{ flex-direction: column; gap: 0; }
+header:has(nav.Open){ background-color: rgba(0, 0, 0, .8);}
+header .Item a{ font-size: 24px; padding: 10px 0;}
+header .Item:hover::after{ display: none;}
+header.Shrink{ padding-right: 0; padding-left: 10px;}
+
+/*Footer*/
+footer .Social .Links{ gap: 10px;}
+footer .Social .Links .Item img{ width: 40px;}
+
+/*KV*/
+.KvBox .Content{ position: relative; padding: 4dvh 30px 20px 30px;}
+.KvBox .VideoArea::after{ content: ''; display: block; position: absolute; left: 0; bottom: 0; right: 0; height: 40%; background: linear-gradient(to bottom, rgba(10, 22, 32, 0) 0%, rgba(10, 22, 32, 1) 100%);}
+.KvBox .Content h2{ font-size: 14dvw;}
+.KvBox .Content h2 br{ display: block;}
+.KvBox .MoreBtn{ display: none;}
+.KvBox .DownloadArea { gap: 10px;}
+.KvBox .DownloadArea .BtnLink{ width: calc(50% - 5px); padding: 10px;}
+.KvBox .DownloadArea .BtnLink .Text{ font-size: 14px;}
+.KvBox .DownloadArea.Fixed{ gap: 3px; bottom: 0; padding: 3px;}
+.KvBox .DownloadArea.Fixed .BtnLink{ flex-direction: column; flex: 1; gap: 5px; background-color: rgba(0,0,0,.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: none;}
+.KvBox .DownloadArea.Fixed .BtnLink .Text{ text-align: center; font-size: 12px;}
+.KvBox .DownloadArea.Fixed .BtnLink .Text span{ display: none;}
+.KvBox .DownloadArea.Fixed .BtnLink::before{ display: none;}
+
+.GamePhoto{ padding: 110px 0 100px 0; background-size: cover; margin-top: 0;}
+.GamePhoto .Slide{ padding: 0 30px; gap: 20px;}
+.GamePhoto .Card{ width: 90%;}
+.GamePhoto .LeftImg{ width: 250px; top: 0;}
+.GamePhoto .RightImg{ top: auto; bottom: 0; width: 150px;}
+.GamePhoto .Light{ top: -60px;}
+
+/* 遊戲介紹區域 */
+.Introduction{ padding-bottom: 0px;}
+.Introduction .Note .SubTitle{ font-size: 40px; }
+.Introduction .Cards{ flex-direction: column; padding: 30px 20px;}
+.Introduction .Cards .Item{ width: 100%;}
+.Introduction .Cards .Item .Text{ padding: 10px 20px;}
+.Introduction .Cards .Item .Text .Title h4{ font-size: 24px;}
+.Introduction .Cards .Item .Text .Word{ font-size: 14px; max-width: 100%;}
+.Introduction .RightBoss{ width: 330px; opacity: 0.2; }
+
+/* 遊玩方式區域 */
+.Way{ padding: 50px 10px; margin-bottom: 0; }
+.Way .Note .SubTitle{ font-size: 40px; }
+.Way .BgPhoto{ padding: 70px 30px 110% 30px;}
+.Way .BgPhoto .Container{ padding: 0;}
+.Way .List{ margin: -100% -10px 0 -10px;}
+.Way .Slide{ padding: 0 50px;}
+.Way .Slide .Item{ width: 80%; border-radius: 20px;}
+
+/* 魚類介紹區域 */
+.Species{ padding: 50px 0;}
+.Species .Note .SubTitle{ font-size: 40px; }
+.Species .BossBox{ padding: 30px 30px 50px 30px; border: 1px solid rgba(255, 255, 255, .2); border-radius: 20px; margin: 20px 10px 0 10px;}
+.Species .BossBox .Group{ flex-direction: column;}
+.Species .BossBox .DataArea{ width: 100%; padding: 0 0 10px 0;}
+.Species .BossBox .DataArea .Name{ font-size: 46px;}
+.Species .BossBox .BossArea .BgName{ padding: 0;}
+.Species .BossBox .BossArea .BgName span{ font-size: 40dvw;}
+/* .Species .FishSlide .Slide .Fish{ width: 50px; height: 50px;} */
+.Species .BossBox .BossArea .Photo{ height: 100%;}
+.Species .BossBox .BossArea .Photo img{ height: 100%;}
+.Species .BossBox .Control{ width: 100%; height: 80dvw; top: auto; bottom: 0;}
+.Species .BossBox .Control .Points{ left: 30px; bottom: 10px;}
+.Species .BossBox .Control .Points .Num{ text-align: center; padding-bottom: 10px;}
+.Species .BossBox .Control .Points .Schedule{ margin: auto;}
+.Species .BossBox .Control .BackBtn{ transform: none; top: auto; bottom: 50dvw;}
+.Species .BossBox .Control .NextBtn{ transform: none; top: auto; bottom: 50dvw;}
+.Species .Explain{ flex-direction: column; padding: 50px 20px 20px 20px;}
+.Species .Explain .Card{ display: flex; position: relative;}
+.Species .Explain .Card .Bg{ width: 30%; padding: 0 15px; margin: auto; flex-shrink: 0; margin: 0;}
+.Species .Explain .Card .Img{ width: 30%; position: absolute; top: 0; left: 0; margin: 0;}
+.Species .Explain .Card .Note{ padding: 0 10px;}
+.Species .Explain .Card .Note p{ color: rgba(255, 255, 255, .6);}
+.Species .Explain .Card:nth-child(2){ flex-direction: row-reverse;}
+.Species .Explain .Card:nth-child(2) .Img{ left: auto; right: 0;}
+
+/* 玩家評語區域 */
+.Comment{ padding: 100px 0 50px 0;}
+.Comment .Note .SubTitle{ font-size: 40px; }
+.Comment .CommentBox .Item{ width: 100%;}
+.Comment .CommentBox{ gap: 10px;}
+.Comment .CommunityBox{ padding: 50px 30px;}
+.Comment .CommunityBox .Photo{ display: none;}
+
+/* 常見問題區域 */
+.QA{ padding: 100px 0 170px 0;}
+.QA .Note .SubTitle{ font-size: 40px; }
+.QA .Note .Text p{ text-shadow: 0 0 20px rgba(0, 0, 0, .8);}
+.QA .List .Item{ width: 100%; padding-bottom: 40px; }
+.QA .List .Item .Question{ font-size: 24px;}
+.QA .Fish01{ width: 110px; left: -10px; top: 650px; transform: none;}
+.QA .Fish02{ width: 200px; top: 360px; opacity: 0.5; z-index: -1;}
+.QA .Fish03{ width: 250px; bottom: -30px;}
+.QA .Fish04{ right: -70px; transform: none; bottom: 250px; left: auto;}
+
+}
+
+.Approach {
+  opacity: 0;  /* 初始隱藏 */
+  transform: translateY(20px);  /* 可選：從下方滑入 */
+  transition: opacity 0.6s ease-out, transform 0.8s ease-out;  /* 轉換效果 */
+}
+
+.Approach.visible {  /* JS 添加此類別時觸發淡入 */
+  opacity: 1;
+  transform: none;
+}

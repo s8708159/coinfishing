@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoinFishing</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="script/main.js"></script>
+</head>
+<body>
+    <header>
+        <a data-target="Top" class="Logo" alt="賞金獵魚"><img src="images/logo.png" alt="賞金獵魚"></a>
+        <div class="MobMenuBtn"><span></span><span></span><span></span></div>
+        <nav class="menu">
+            <ul>
+                <li class="Item"><a data-target="Introduction" title="遊戲介紹">遊戲介紹</a></li>
+                <li class="Item"><a data-target="Way" title="遊玩方式">遊玩方式</a></li>
+                <li class="Item"><a data-target="Species" title="魚種介紹">魚種介紹</a></li>
+                <li class="Item"><a data-target="Comment" title="玩家評語">玩家評語</a></li>
+                <li class="Item"><a data-target="QA" title="常見問題">常見問題</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- 影片區域 -->
+        <section class="KvBox Approach" id="Top">
+            <div class="VideoArea">
+                <video src="videos/video.mp4" autoplay muted loop></video>
+            </div>
+            <div class="Content">
+                <h1>賞金獵魚</h1>
+                <h2>享受最刺激的<br>捕魚機遊戲</h2>
+                <div class="DownloadArea">
+                    <a class="BtnLink" href="#" title="立即下載 Apple Store">
+                        <div class="Icon"><img src="images/icon-apple.png" alt="Apple Store"></div>
+                        <div class="Text">Apple Store<span>立即下載</span></div>
+                    </a>
+                    <a class="BtnLink" href="#" title="立即下載 Google Play">
+                        <div class="Icon"><img src="images/icon-google.png" alt="Google Play"></div>
+                        <div class="Text">Google Play<span>立即下載</span></div>
+                    </a>
+                    <a class="BtnLink" href="#" title="立即下載 Apple IPA">
+                        <div class="Icon"><img src="images/icon-apple.png" alt="Apple IPA"></div>
+                        <div class="Text">Apple IPA<span>立即下載</span></div>
+                    </a>
+                    <a class="BtnLink" href="#" title="立即下載 Android APK">
+                        <div class="Icon"><img src="images/icon-android.png" alt="Android APK"></div>
+                        <div class="Text">Android APK<span>立即下載</span></div>
+                    </a>
+                    <a class="BtnLink" href="#" title="立即下載 Windows">
+                        <div class="Icon"><img src="images/icon-windows.png" alt="Windows"></div>
+                        <div class="Text">Windows<span>立即下載</span></div>
+                    </a>
+                </div>
+                <h3>馬上安裝開始捕魚遊戲</h3>
+            </div>
+            <a href="#GamePhoto" class="MoreBtn">
+                <div class="Animation"></div>
+                <span>更多介紹</span>
+            </a>
+            <div class="TopLight"><img src="images/img-light-top.svg" alt="光暈"></div>
+        </section>
+        <!-- 遊戲截圖區域 -->
+        <div class="GamePhoto Approach" id="GamePhoto">
+            <div class="Slide" id="gamePhotoSlide">
+                <div class="Card">
+                    <div class="Photo"><img src="images/img-gamephoto-01.png" alt="全民星捕魚的2025年第一季即將到來，開始捕魚吧！"></div>
+                    <div class="Text">全民星捕魚的2025年第一季即將到來，開始捕魚吧！</div>
+                </div>
+                <div class="Card">
+                    <div class="Photo"><img src="images/img-gamephoto-02.png" alt="帥到不行、酷炫炸裂的BOSS魚，給你無窮無盡的金幣爆擊！"></div>
+                    <div class="Text">帥到不行、酷炫炸裂的BOSS魚，給你無窮無盡的金幣爆擊！</div>
+                </div>
+                <div class="Card">
+                    <div class="Photo"><img src="images/img-gamephoto-03.png" alt="全民星捕魚的2025年第一季即將到來，快來獲得專屬的NFT吧！"></div>
+                    <div class="Text">全民星捕魚的2025年第一季即將到來，快來獲得專屬的NFT吧！</div>
+                </div>
+                <div class="Card">
+                    <div class="Photo"><img src="images/img-gamephoto-04.png" alt="全民星捕魚的2025年第一季即將到來，快來體驗精美的遊戲畫面！"></div>
+                    <div class="Text">全民星捕魚的2025年第一季即將到來，快來體驗精美的遊戲畫面！</div>
+                </div>
+            </div>
+            <div class="LeftImg"><img src="images/img-game-boss-left.png" alt="賞金獵魚BOSS"></div>
+            <div class="RightImg"><img src="images/img-game-boss-right.png" alt="賞金獵魚BOSS"></div>
+            <div class="Light"><img src="images/img-game-light.png" alt="賞金獵魚光暈"></div>
+        </div>
+        <!-- 遊戲介紹區域 -->
+        <section class="Introduction Approach" id="Introduction">
+            <div class="Container">
+                <div class="Note">
+                    <div class="MainTitle"><h2>遊戲介紹</h2></div>
+                    <h3 class="SubTitle">探索3D<span>捕魚冒險</span><br>挑戰多元漁場！</h3>
+                    <div class="Text">
+                        <p>探索刺激的捕魚冒險，體驗多樣化的遊戲模式與豐富獎勵！</p>
+                        <p>使用高品質3D渲染技術，呈現栩栩如生的海洋場景，搭配酷炫特效與全景畫面，讓玩家彷彿置身海底世界，享受真實的捕魚快感。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="Cards Approach">
+                <div class="Item">
+                    <div class="Photo">
+                        <img src="images/img-introduction-photo-01.png" alt="精緻3D特效">
+                    </div>
+                    <div class="Text">
+                        <div class="Title"><img src="images/img-introduction-01.svg" alt="精緻3D特效"><h4>精緻3D特效</h4></div>
+                        <p class="Word">栩栩如生的海洋世界，華麗3D特效與震撼音效，打造沉浸式捕魚體驗，讓你彷彿置身深海冒險！</p>
+                    </div>
+                </div>
+                <div class="Item">
+                    <div class="Photo">
+                        <img src="images/img-introduction-photo-02.png" alt="多種不同玩法">
+                    </div>
+                    <div class="Text">
+                        <div class="Title"><img src="images/img-introduction-02.svg" alt="多種不同玩法"><h4>多種不同玩法</h4></div>
+                        <p class="Word">經典捕魚、漁汛模式、轉盤模式，創新模式層出不窮，滿足各類玩家，暢享無限遊戲樂趣！</p>
+                    </div>
+                </div>
+                <div class="Item">
+                    <div class="Photo">
+                        <img src="images/img-introduction-photo-03.png" alt="高倍率獎勵">
+                    </div>
+                    <div class="Text">
+                        <div class="Title"><img src="images/img-introduction-03.svg" alt="高倍率獎勵"><h4>高倍率獎勵</h4></div>
+                        <p class="Word">捕獲稀有魚種與史詩BOSS，贏取高倍率金幣與豐厚獎勵，每一擊都充滿驚喜與成就感！</p>
+                    </div>
+                </div>
+                <div class="Item">
+                    <div class="Photo">
+                        <img src="images/img-introduction-photo-04.png" alt="多個不同漁場">
+                    </div>
+                    <div class="Text">
+                        <div class="Title"><img src="images/img-introduction-04.svg" alt="多個不同漁場"><h4>多個不同漁場</h4></div>
+                        <p class="Word">多款風格漁場，絢麗場景與特色魚種，結合獨特魚群與挑戰任務，帶你體驗千變萬化的捕魚樂趣！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="RightBoss"><img src="images/img-introduction-boss.png" alt="賞金獵魚BOSS"></div>
+        </section>
+        <!-- 遊玩方式區域 -->
+        <section class="Way Approach" id="Way">
+            <div class="BgPhoto" style="background-image: url('images/img-way-bg.png');">
+                <div class="Container">
+                    <div class="Note">
+                        <div class="MainTitle"><h2>遊玩方式</h2></div>
+                        <h3 class="SubTitle">公開<span>捕魚技巧</span><br>狩獵快速上手！</h3>
+                        <div class="Text">
+                            <p>捕魚遊戲操作簡單：選擇炮台倍率、瞄準射擊魚群，即可獲取金幣。</p>
+                            <p>掌握魚潮時機，使用鎖定功能或特殊道具，提升捕獲效率，享受策略與運氣完美結合的休閒遊戲！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="List Approach">
+                <div class="Slide">
+                    <div class="Item">
+                        <div class="StepArea"><img src="images/icon-way-step.svg" alt="選擇漁場">STEP<span>01</span></div>
+                        <img src="images/img-way-01.png" alt="選擇漁場">
+                        <h4 class="Name">選擇漁場</h4>
+                        <h5 class="Ps">不同的漁場將會有不同的倍率獎勵</h5>
+                    </div>
+                    <div class="Item">
+                        <div class="StepArea"><img src="images/icon-way-step.svg" alt="選擇砲倍與道具">STEP<span>02</span></div>
+                        <img src="images/img-way-02.png" alt="選擇砲倍與道具">
+                        <h4 class="Name">選擇砲倍與道具</h4>
+                        <h5 class="Ps">透過不同的砲倍與道具可以打出更高額的獎勵</h5>
+                    </div>
+                    <div class="Item">
+                        <div class="StepArea"><img src="images/icon-way-step.svg" alt="開始射擊">STEP<span>03</span></div>
+                        <img src="images/img-way-03.png" alt="開始射擊">
+                        <h4 class="Name">開始射擊</h4>
+                        <h5 class="Ps">瞄準漁場中的魚持續射擊直到消滅</h5>
+                    </div>
+                    <div class="Item">
+                        <div class="StepArea"><img src="images/icon-way-step.svg" alt="擊殺BOSS 進行翻倍小遊戲">STEP<span>04</span></div>
+                        <img src="images/img-way-02.png" alt="擊殺BOSS 進行翻倍小遊戲">
+                        <h4 class="Name">擊殺BOSS 進行翻倍小遊戲</h4>
+                        <h5 class="Ps">擊殺BOSS時可以透過額外小遊戲來讓獎勵翻倍再翻倍</h5>
+                    </div>
+                    <div class="Item">
+                        <div class="StepArea"><img src="images/icon-way-step.svg" alt="獲取獎勵">STEP<span>05</span></div>
+                        <img src="images/img-way-03.png" alt="獲取獎勵">
+                        <h4 class="Name">獲取獎勵</h4>
+                        <h5 class="Ps">享受本次所獲得的高額獎勵</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 魚種介紹區域 -->
+        <section class="Species Approach" id="Species">
+            <div class="Container">
+                <div class="Note">
+                    <div class="MainTitle"><h2>魚種介紹</h2></div>
+                    <h3 class="SubTitle">認識<span>稀有魚種</span><br>捕獲高分獎勵！</h3>
+                    <div class="Text">
+                        <p>遊戲內超過60種魚類，從小丑魚到機甲鯊魚，每種有獨特分數與出現機率。</p>
+                        <p>稀有BOSS如血紅咆哮提供高倍獎勵，了解弱點才能輕鬆擊殺，增添挑戰樂趣！</p>
+                    </div>
+                </div>
+            </div>
+            <!-- BOSS輪播 -->
+            <div class="BossBox">
+                <div class="Slide">
+                    <!-- 血紅咆哮 -->
+                    <div class="Group" id="Boss01">
+                        <div class="DataArea">
+                            <div>
+                                <p class="Title">BOSS</p>
+                                <h3 class="Name">血紅咆哮</h3>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Data</div>
+                                <div class="Main">最高倍率：720倍</div>
+                                <div class="SubT">嗜血的戰鬥機器，無時無刻都在等候著獵魚人的到來，等待最佳時機出擊。</div>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Habitat</div>
+                                <div class="Data">
+                                    <div class="Item BossArea01 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">挑戰者港灣</div>
+                                    </div>
+                                    <div class="Item BossArea02 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">大師海峽</div>
+                                    </div>
+                                    <div class="Item BossArea03">
+                                        <div class="Icon"></div>
+                                        <div class="Text">冠軍海域</div>
+                                    </div>
+                                    <div class="Item BossArea04">
+                                        <div class="Icon"></div>
+                                        <div class="Text">皇家獵場</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Physical Attributes</div>
+                                <div class="Data">
+                                    <div class="Item">
+                                        <div class="Icon"><img src="images/icon-length.svg" alt="身形"></div>
+                                        <div class="Text">50<span>m</span></div>
+                                    </div>
+                                    <div class="Item">
+                                        <div class="Icon"><img src="images/icon-weight.svg" alt="重量"></div>
+                                        <div class="Text">4,000<span>t</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="BossArea">
+                            <div class="BgName">
+                                <div class="Row"><span>血</span><span>紅</span></div>
+                                <div class="Row"><span>咆</span><span>哮</span></div>
+                            </div>
+                            <div class="Photo"><img src="images/img-boss-01.png" alt="血紅咆哮"></div>
+                        </div>
+                    </div>
+                    <!-- Ｍr.Bean -->
+                    <div class="Group" id="Boss02">
+                        <div class="DataArea">
+                            <div>
+                                <p class="Title">BOSS</p>
+                                <h3 class="Name">Ｍr.Bean</h3>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Data</div>
+                                <div class="Main">最高倍率：300倍</div>
+                                <div class="SubT">與節奏合而為一的超級酷企鵝！</div>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Habitat</div>
+                                <div class="Data">
+                                    <div class="Item BossArea01 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">挑戰者港灣</div>
+                                    </div>
+                                    <div class="Item BossArea02">
+                                        <div class="Icon"></div>
+                                        <div class="Text">大師海峽</div>
+                                    </div>
+                                    <div class="Item BossArea03">
+                                        <div class="Icon"></div>
+                                        <div class="Text">冠軍海域</div>
+                                    </div>
+                                    <div class="Item BossArea04">
+                                        <div class="Icon"></div>
+                                        <div class="Text">皇家獵場</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Physical Attributes</div>
+                                <div class="Data">
+                                    <div class="Item">
+                                        <div class="Icon"><img src="images/icon-length.svg" alt="身形"></div>
+                                        <div class="Text">110<span>cm</span></div>
+                                    </div>
+                                    <div class="Item">
+                                        <div class="Icon"><img src="images/icon-weight.svg" alt="重量"></div>
+                                        <div class="Text">40<span>kg</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="BossArea">
+                            <div class="BgName">
+                                <div class="Row"><span>Mr.</span></div>
+                                <div class="Row"><span>Bean</span></div>
+                            </div>
+                            <div class="Photo"><img src="images/img-boss-02.png" alt="Ｍr.Bean"></div>
+                        </div>
+                    </div>
+                    <!-- 金融巨鱷 -->
+                    <div class="Group" id="Boss03">
+                        <div class="DataArea">
+                            <div>
+                                <p class="Title">BOSS</p>
+                                <h3 class="Name">金融巨鱷</h3>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Data</div>
+                                <div class="Main">最高倍率：520倍</div>
+                                <div class="SubT">金融界的金字塔頂端，給予玩家激進的投資建議，如果聽從他的建議買股票的話，會發生什麼事情呢...？</div>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Habitat</div>
+                                <div class="Data">
+                                    <div class="Item BossArea01 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">挑戰者港灣</div>
+                                    </div>
+                                    <div class="Item BossArea02 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">大師海峽</div>
+                                    </div>
+                                    <div class="Item BossArea03">
+                                        <div class="Icon"></div>
+                                        <div class="Text">冠軍海域</div>
+                                    </div>
+                                    <div class="Item BossArea04">
+                                        <div class="Icon"></div>
+                                        <div class="Text">皇家獵場</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Physical Attributes</div>
+                                <div class="Data">
+                                    <div class="Item">
+                                        <div class="Icon"><img src="images/icon-length.svg" alt="身形"></div>
+                                        <div class="Text">200<span>cm</span></div>
+                                    </div>
+                                    <div class="Item">
+                                        <div class="Icon"><img src="images/icon-weight.svg" alt="重量"></div>
+                                        <div class="Text">600<span>kg</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="BossArea">
+                            <div class="BgName">
+                                <div class="Row"><span>金</span><span>融</span></div>
+                                <div class="Row"><span>巨</span><span>鱷</span></div>
+                            </div>
+                            <div class="Photo"><img src="images/img-boss-03.png" alt="金融巨鱷"></div>
+                        </div>
+                    </div>
+                    <!-- 幽冥巨鯨 -->
+                    <div class="Group" id="Boss04">
+                        <div class="DataArea">
+                            <div>
+                                <p class="Title">BOSS</p>
+                                <h3 class="Name">幽冥巨鯨</h3>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Data</div>
+                                <div class="Main">最高倍率：1,000倍</div>
+                                <div class="SubT">來自異空間的頂級掠食者，沒有人知道巨鯨的去向，假如巨鯨剛好來到你的漁場，請不要放過這千載難逢的機會。</div>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Habitat</div>
+                                <div class="Data">
+                                    <div class="Item BossArea01 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">挑戰者港灣</div>
+                                    </div>
+                                    <div class="Item BossArea02 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">大師海峽</div>
+                                    </div>
+                                    <div class="Item BossArea03">
+                                        <div class="Icon"></div>
+                                        <div class="Text">冠軍海域</div>
+                                    </div>
+                                    <div class="Item BossArea04 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">皇家獵場</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Physical Attributes</div>
+                                <div class="Data">
+                                    <div class="Item">
+                                        <div class="Icon"><img src="images/icon-length.svg" alt="身形"></div>
+                                        <div class="Text">200<span>m</span></div>
+                                    </div>
+                                    <div class="Item">
+                                        <div class="Icon"><img src="images/icon-weight.svg" alt="重量"></div>
+                                        <div class="Text">???<span>t</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="BossArea">
+                            <div class="BgName">
+                                <div class="Row"><span>幽</span><span>冥</span></div>
+                                <div class="Row"><span>巨</span><span>鯨</span></div>
+                            </div>
+                            <div class="Photo"><img src="images/img-boss-04.png" alt="幽冥巨鯨"></div>
+                        </div>
+                    </div>
+                    <!-- 寒晶冰龍 -->
+                    <div class="Group" id="Boss05">
+                        <div class="DataArea">
+                            <div>
+                                <p class="Title">BOSS</p>
+                                <h3 class="Name">寒晶冰龍</h3>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Data</div>
+                                <div class="Main">最高倍率：7,500倍</div>
+                                <div class="SubT">嗜血的戰鬥機器，無時無刻都在等候著獵魚人的到來，等待最佳時機出擊。</div>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Habitat</div>
+                                <div class="Data">
+                                    <div class="Item BossArea01 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">挑戰者港灣</div>
+                                    </div>
+                                    <div class="Item BossArea02 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">大師海峽</div>
+                                    </div>
+                                    <div class="Item BossArea03">
+                                        <div class="Icon"></div>
+                                        <div class="Text">冠軍海域</div>
+                                    </div>
+                                    <div class="Item BossArea04 None">
+                                        <div class="Icon"></div>
+                                        <div class="Text">皇家獵場</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="NoteCard">
+                                <div class="CardTitle">Physical Attributes</div>
+                                <div class="Data">
+                                    <div class="Item">
+                                        <div class="Icon"><img src="images/icon-length.svg" alt="身形"></div>
+                                        <div class="Text">???<span>m</span></div>
+                                    </div>
+                                    <div class="Item">
+                                        <div class="Icon"><img src="images/icon-weight.svg" alt="重量"></div>
+                                        <div class="Text">???<span>t</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="BossArea">
+                            <div class="BgName">
+                                <div class="Row"><span>寒</span><span>晶</span></div>
+                                <div class="Row"><span>冰</span><span>龍</span></div>
+                            </div>
+                            <div class="Photo"><img src="images/img-boss-05.png" alt="寒晶冰龍"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Control">
+                    <div class="BackBtn" id="BackBtn"><img src="images/icon-arrow-back.svg" alt="返回">BACK</div>
+                    <div class="NextBtn" id="NextBtn"><img src="images/icon-arrow-next.svg" alt="前進">NEXT</div>
+                    <div class="Points">
+                        <div class="Num"><span id="BossNum">1</span>/5</div>
+                        <div class="Schedule" id="BossSchedule">
+                            <span class="Item Focus"></span>
+                            <span class="Item"></span>
+                            <span class="Item"></span>
+                            <span class="Item"></span>
+                            <span class="Item"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 介紹卡 -->
+            <div class="Explain Container Approach">
+                <div class="Card">
+                    <div class="Bg"><img src="images/img-species-card-bg-01.png" alt="顛覆想像的捕魚新紀元"></div>
+                    <div class="Img"><img src="images/img-species-card-img-01.png" alt="顛覆想像的捕魚新紀元"></div>
+                    <div class="Note">
+                        <h4>顛覆想像的捕魚新紀元</h4>
+                        <p>全新打造百種魚種與終極BOSS登場，獨特技能與爆金特效全面升級，挑戰你的技術與反應，重新定義每一次捕魚快感！</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Bg"><img src="images/img-species-card-bg-02.png" alt="極致震撼的視覺盛宴"></div>
+                    <div class="Img"><img src="images/img-species-card-img-02.png" alt="極致震撼的視覺盛宴"></div>
+                    <div class="Note">
+                        <h4>極致震撼的視覺盛宴</h4>
+                        <p>採用頂尖3D渲染技術，細節精雕細琢，場景動態栩栩如生，讓每一次出槍都身歷其境、火力全開！</p>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Bg"><img src="images/img-species-card-bg-03.png" alt="爆金快感 一擊千金"></div>
+                    <div class="Img"><img src="images/img-species-card-img-03.png" alt="爆金快感 一擊千金"></div>
+                    <div class="Note">
+                        <h4>爆金快感 一擊千金</h4>
+                        <p>超高爆率結合連鎖特效，滿屏彩金瞬間引爆，搭配獨家獎勵機制，讓每一發都可能翻盤成王！</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 小魚輪播 -->
+            <div class="FishSlide">
+                <div class="Slide" id="fishSlide">
+                    <div class="Fish"><img src="images/img-fish-01.png" alt="小河豚"></div>
+                    <div class="Fish"><img src="images/img-fish-02.png" alt="蓝魚"></div>
+                    <div class="Fish"><img src="images/img-fish-03.png" alt="鱟"></div>
+                    <div class="Fish"><img src="images/img-fish-04.png" alt="鸚鵡螺"></div>
+                    <div class="Fish"><img src="images/img-fish-05.png" alt="神仙魚"></div>
+                    <div class="Fish"><img src="images/img-fish-06.png" alt="小丑魚"></div>
+                    <div class="Fish"><img src="images/img-fish-07.png" alt="熱帶魚"></div>
+                    <div class="Fish"><img src="images/img-fish-08.png" alt="秋刀魚"></div>
+                    <div class="Fish"><img src="images/img-fish-09.png" alt="螃蟹"></div>
+                    <div class="Fish"><img src="images/img-fish-10.png" alt="生氣河豚"></div>
+                    <div class="Fish"><img src="images/img-fish-11.png" alt="海馬"></div>
+                    <div class="Fish"><img src="images/img-fish-12.png" alt="安康魚"></div>
+                    <div class="Fish"><img src="images/img-fish-13.png" alt="水母"></div>
+                    <div class="Fish"><img src="images/img-fish-14.png" alt="獅子魚"></div>
+                    <div class="Fish"><img src="images/img-fish-15.png" alt="藍色鬥魚"></div>
+                    <div class="Fish"><img src="images/img-fish-16.png" alt="紅色鬥魚"></div>
+                    <div class="Fish"><img src="images/img-fish-17.png" alt="龍蝦"></div>
+                    <div class="Fish"><img src="images/img-fish-18.png" alt="海龜"></div>
+                    <div class="Fish"><img src="images/img-fish-19.png" alt="魷魚"></div>
+                    <div class="Fish"><img src="images/img-fish-20.png" alt="海星"></div>
+                </div>
+            </div>
+            <div class="FishSlide Reverse">
+                <div class="Slide" id="fishSlide">
+                    <div class="Fish"><img src="images/img-fish-01.png" alt="小河豚"></div>
+                    <div class="Fish"><img src="images/img-fish-02.png" alt="蓝魚"></div>
+                    <div class="Fish"><img src="images/img-fish-03.png" alt="鱟"></div>
+                    <div class="Fish"><img src="images/img-fish-04.png" alt="鸚鵡螺"></div>
+                    <div class="Fish"><img src="images/img-fish-05.png" alt="神仙魚"></div>
+                    <div class="Fish"><img src="images/img-fish-06.png" alt="小丑魚"></div>
+                    <div class="Fish"><img src="images/img-fish-07.png" alt="熱帶魚"></div>
+                    <div class="Fish"><img src="images/img-fish-08.png" alt="秋刀魚"></div>
+                    <div class="Fish"><img src="images/img-fish-09.png" alt="螃蟹"></div>
+                    <div class="Fish"><img src="images/img-fish-10.png" alt="生氣河豚"></div>
+                    <div class="Fish"><img src="images/img-fish-11.png" alt="海馬"></div>
+                    <div class="Fish"><img src="images/img-fish-12.png" alt="安康魚"></div>
+                    <div class="Fish"><img src="images/img-fish-13.png" alt="水母"></div>
+                    <div class="Fish"><img src="images/img-fish-14.png" alt="獅子魚"></div>
+                    <div class="Fish"><img src="images/img-fish-15.png" alt="藍色鬥魚"></div>
+                    <div class="Fish"><img src="images/img-fish-16.png" alt="紅色鬥魚"></div>
+                    <div class="Fish"><img src="images/img-fish-17.png" alt="龍蝦"></div>
+                    <div class="Fish"><img src="images/img-fish-18.png" alt="海龜"></div>
+                    <div class="Fish"><img src="images/img-fish-19.png" alt="魷魚"></div>
+                    <div class="Fish"><img src="images/img-fish-20.png" alt="海星"></div>
+                </div>
+            </div>
+        </section>
+        <!-- 玩家評語區域 -->
+        <section class="Comment Approach" id="Comment">
+            <div class="Container">
+                <div class="Note">
+                    <div class="MainTitle"><h2>玩家評語</h2></div>
+                    <h3 class="SubTitle">玩家分享<span>捕魚樂趣</span>與心得</h3>
+                    <div class="Text">
+                        <p>看看其他玩家的評價與遊玩感想吧！</p>
+                        <p>從新手分享上手心得，到高手揭秘大獎攻略，每位玩家都帶來獨特體驗。一同享受捕魚的熱情，一起加入海洋冒險！</p>
+                    </div>
+                </div>
+                <div class="CommentBox Approach">
+                    <!-- 一筆資料 -->
+                    <div class="Item">
+                        <div class="PhotoArea">
+                            <div class="Photo"><img src="images/img-user-01.png" alt="Danny"></div>
+                            <div class="Source"><img src="images/icon-comment-fb.svg" alt="Facebook"></div>
+                            <div class="StarArea">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                            </div>
+                        </div>
+                        <div class="InfoArea">
+                            <div class="Name">Danny</div>
+                            <div class="Text">剛玩就上手，畫面超華麗！輕鬆射擊小魚，幾分鐘就贏了不少金幣，超推新手試玩！</div>
+                        </div>
+                    </div>
+                    <!-- 一筆資料 -->
+                    <div class="Item">
+                        <div class="PhotoArea">
+                            <div class="Photo"><img src="images/img-user-02.png" alt="Roger"></div>
+                            <div class="Source"><img src="images/icon-comment-fb.svg" alt="Facebook"></div>
+                            <div class="StarArea">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                            </div>
+                        </div>
+                        <div class="InfoArea">
+                            <div class="Name">Roger</div>
+                            <div class="Text">玩了三個月，活動福利多，升級炮台後打BOSS更爽，推薦給所有捕魚迷！</div>
+                        </div>
+                    </div>
+                    <!-- 一筆資料 -->
+                    <div class="Item">
+                        <div class="PhotoArea">
+                            <div class="Photo"><img src="images/img-user-03.png" alt="David .PL"></div>
+                            <div class="Source"><img src="images/icon-comment-x.svg" alt="X"></div>
+                            <div class="StarArea">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                            </div>
+                        </div>
+                        <div class="InfoArea">
+                            <div class="Name">David .PL</div>
+                            <div class="Text">鎖定功能超好用，魚潮時換大炮效率爆表，策略玩家絕對愛不釋手！</div>
+                        </div>
+                    </div>
+                    <!-- 一筆資料 -->
+                    <div class="Item">
+                        <div class="PhotoArea">
+                            <div class="Photo"><img src="images/img-user-04.png" alt="Allen"></div>
+                            <div class="Source"><img src="images/icon-comment-x.svg" alt="X"></div>
+                            <div class="StarArea">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                            </div>
+                        </div>
+                        <div class="InfoArea">
+                            <div class="Name">Allen</div>
+                            <div class="Text">昨天捕到稀有BOSS，獎勵爆棚！這遊戲的道具系統讓我每次都期待大獎！</div>
+                        </div>
+                    </div>
+                    <!-- 一筆資料 -->
+                    <div class="Item">
+                        <div class="PhotoArea">
+                            <div class="Photo"><img src="images/img-user-05.png" alt="Yuki"></div>
+                            <div class="Source"><img src="images/icon-comment-fb.svg" alt="Facebook"></div>
+                            <div class="StarArea">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                            </div>
+                        </div>
+                        <div class="InfoArea">
+                            <div class="Name">Yuki</div>
+                            <div class="Text">每天玩半小時放鬆心情，畫面音效一流，簡單操作也有滿滿成就感！</div>
+                        </div>
+                    </div>
+                    <!-- 一筆資料 -->
+                    <div class="Item">
+                        <div class="PhotoArea">
+                            <div class="Photo"><img src="images/img-user-06.png" alt="Calvin .L.P"></div>
+                            <div class="Source"><img src="images/icon-comment-fb.svg" alt="Facebook"></div>
+                            <div class="StarArea">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                                <img src="images/icon-star.svg" alt="Star">
+                            </div>
+                        </div>
+                        <div class="InfoArea">
+                            <div class="Name">Calvin .L.P</div>
+                            <div class="Text">多人模式太刺激！和朋友組隊打BOSS，獎勵翻倍，簡直停不下來！</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="CommunityBox">
+                    <div class="LinkArea">
+                        <h3>一起加入我們的社群吧！</h3>
+                        <div class="Links">
+                            <a href="#" class="Item" title="Facebook"><img src="images/icon-fb.png" alt="Facebook"></a>
+                            <a href="#" class="Item" title="LINE"><img src="images/icon-line.png" alt="LINE"></a>
+                            <a href="#" class="Item" title="Instagram"><img src="images/icon-ig.png" alt="Instagram"></a>
+                            <a href="#" class="Item" title="WeChat"><img src="images/icon-wechat.png" alt="WeChat"></a>
+                            <a href="#" class="Item" title="X"><img src="images/icon-x.png" alt="X"></a>
+                            <a href="#" class="Item" title="YouTube"><img src="images/icon-youtube.png" alt="YouTube"></a>
+                        </div>
+                    </div>
+                    <div class="Photo"><img src="images/img-species-card-img-03.png" alt="一起加入我們的社群吧！"></div>
+                </div>
+            </div>
+        </section>
+        <!-- 常見問題區域 -->
+        <section class="QA Approach" id="QA">
+            <div class="Container">
+                <div class="Note">
+                    <div class="MainTitle"><h2>常見問題</h2></div>
+                    <h3 class="SubTitle">解答<span>遊戲疑惑</span>獲得捕魚攻略！</h3>
+                    <div class="Text">
+                        <p>探索刺激的捕魚冒險，體驗多樣化的遊戲模式與豐富獎勵！</p>
+                        <p>採用高品質3D渲染技術，呈現栩栩如生的海洋場景，搭配酷炫特效與全景畫面，讓玩家彷彿置身海底世界，享受真實的捕魚快感。</p>
+                    </div>
+                </div>
+                <div class="List Approach">
+                    <div class="Item">
+                        <div class="Question">捕魚遊戲如何開始？</div>
+                        <div class="Answer">註冊賞金獵魚帳號，選擇炮台倍率，點擊螢幕瞄準魚群即可開始射擊捕魚！新手可先遊玩教學模式熟悉捕魚遊戲。</div>
+                        <div class="Num">01</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">如何獲得更多金鯊幣？</div>
+                        <div class="Answer">透過捕魚、完成每日任務或參加遊戲活動獲得金鯊幣，如捕獲稀有魚種可獲得更高獎勵！</div>
+                        <div class="Num">02</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">炮台倍率對捕魚有什麼作用？</div>
+                        <div class="Answer">倍率決定射擊捕魚時所消耗的金鯊幣數量，當倍率越高，捕獲魚的獎勵越大。</div>
+                        <div class="Num">03</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">什麼是特殊道具？如何使用？</div>
+                        <div class="Answer">道具如追蹤炮、冰凍魚雷可提升捕魚效率，遊戲中點擊道具圖示即可使用。</div>
+                        <div class="Num">04</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">為什麼有些魚難捕獲？</div>
+                        <div class="Answer">高獎金稀有魚或BOSS捕獲機率較低，建議升級炮台或使用鎖定功能，增加捕獲成功率。</div>
+                        <div class="Num">05</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">是否支持多人遊戲？</div>
+                        <div class="Answer">是的！支持4人即時連線，與好友組隊或全球玩家競技，增添對戰樂趣。</div>
+                        <div class="Num">06</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">遊戲卡頓或無法登入怎麼辦？</div>
+                        <div class="Answer">檢查網路連線，確認是否為最新版本，或聯繫客服提供相關資訊以快速解決問題。</div>
+                        <div class="Num">07</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">如何升級炮台？</div>
+                        <div class="Answer">在捕魚遊戲中捕獲魚種時有機率掉落升炮素材，使用素材即可升級炮倍。</div>
+                        <div class="Num">08</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">有新手教學模式嗎？</div>
+                        <div class="Answer">提供新手引導關卡試玩，幫助熟悉遊戲操作與規則，教學模式消耗的金鯊幣為系統贈送，完成新手引導關卡將贈送100萬金鯊幣。</div>
+                        <div class="Num">09</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">如何升級VIP特權？</div>
+                        <div class="Answer">充值即可獲取VIP經驗值，達到下一階VIP門檻時即可升級，即可享有VIP特權。</div>
+                        <div class="Num">10</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">哪裡可以遊玩？</div>
+                        <div class="Answer">可從app store下載apple版本手機遊戲，也可從Google play下載Android版本手機遊戲，電腦版本可從官網下載電腦版本的電腦遊戲。</div>
+                        <div class="Num">11</div>
+                    </div>
+                    <div class="Item">
+                        <div class="Question">遊戲免費嗎？</div>
+                        <div class="Answer">是這是免費遊戲，可全程免費遊玩捕魚遊戲。</div>
+                        <div class="Num">12</div>
+                    </div>
+                </div>
+            </div>
+            <div class="Fish01"><img src="images/img-qa-fish-01.png" alt="魚類01"></div>
+            <div class="Fish02"><img src="images/img-qa-fish-02.png" alt="魚類02"></div>
+            <div class="Fish03"><img src="images/img-qa-fish-03.png" alt="魚類03"></div>
+            <div class="Fish04"><img src="images/img-qa-fish-04.png" alt="魚類04"></div>
+        </section>
+    </main>
+    <footer>
+        <img src="images/img-warn.png" alt="警告15歲輔導級" class="Warning">
+        <div class="Social">
+            <div class="Title">Follow Us !</div>
+            <div class="Links">
+                <a href="#" class="Item" title="LINE"><img src="images/icon-line.png" alt="LINE"></a>
+                <a href="#" class="Item" title="X"><img src="images/icon-x.png" alt="X"></a>
+                <a href="#" class="Item" title="WeChat"><img src="images/icon-wechat.png" alt="WeChat"></a>
+                <a href="#" class="Item" title="Insragram"><img src="images/icon-ig.png" alt="Insragram"></a>
+                <a href="#" class="Item" title="Facebook"><img src="images/icon-fb.png" alt="Facebook"></a>
+                <a href="#" class="Item" title="YouTube"><img src="images/icon-youtube.png" alt="YouTube"></a>
+            </div>
+        </div>
+        <div class="Word">提醒您，長時間連續進行遊戲可能沉迷影響身心健康。內建遊戲商城，須另外支付遊戲點數方能使用，遊戲點數一經購入兌換遊戲幣後無法以任何理由退換現金。本遊戲情節涉及棋牌益智及娛樂，非現金交易賭博，使用者請勿進行非法遊戲幣交易。此為機會中獎商品，消費者購買或參與活動不代表即可獲得特定商品。</div>
+        <div class="Copyright">© CopyRights 2025. All Rights Reserved to Star Core</div>
+    </footer>
+</body>
+</html>
