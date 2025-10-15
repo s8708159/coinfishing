@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="secureGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 盾牌外框 -->
+  <path d="M 50 10 L 80 25 L 80 50 Q 80 75 50 90 Q 20 75 20 50 L 20 25 Z" 
+        fill="url(#secureGradient)" stroke="#fff" stroke-width="2"/>
+  
+  <!-- 鎖的身體 -->
+  <rect x="40" y="50" width="20" height="20" rx="2" fill="white"/>
+  
+  <!-- 鎖孔 -->
+  <circle cx="50" cy="57" r="3" fill="#667eea"/>
+  <rect x="48" y="57" width="4" height="8" fill="#667eea"/>
+  
+  <!-- 鎖扣 -->
+  <path d="M 42 50 L 42 42 Q 42 35 50 35 Q 58 35 58 42 L 58 50" 
+        fill="none" stroke="white" stroke-width="3"/>
+</svg>

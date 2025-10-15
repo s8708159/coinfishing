@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coinfishing - 加密貨幣資訊平台">
+    <title>Coinfishing - 加密貨幣資訊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="Coinfishing Logo">
+                    <h1>Coinfishing</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#about">關於</a></li>
+                    <li><a href="#features">特色</a></li>
+                    <li><a href="#contact">聯絡</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>歡迎來到 Coinfishing</h2>
+                <p>您的加密貨幣資訊平台</p>
+                <button class="cta-button" onclick="showMessage()">立即開始</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>關於我們</h2>
+                <p>Coinfishing 提供最新的加密貨幣資訊、市場分析和投資建議。</p>
+                <div class="about-content">
+                    <div class="about-card">
+                        <img src="images/icon-secure.svg" alt="安全圖示">
+                        <h3>安全可靠</h3>
+                        <p>採用業界最高安全標準</p>
+                    </div>
+                    <div class="about-card">
+                        <img src="images/icon-fast.svg" alt="快速圖示">
+                        <h3>即時更新</h3>
+                        <p>提供即時市場數據</p>
+                    </div>
+                    <div class="about-card">
+                        <img src="images/icon-support.svg" alt="支援圖示">
+                        <h3>專業支援</h3>
+                        <p>24/7 客戶服務</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>主要特色</h2>
+                <ul class="feature-list">
+                    <li>✓ 即時加密貨幣價格追蹤</li>
+                    <li>✓ 市場趨勢分析</li>
+                    <li>✓ 投資組合管理</li>
+                    <li>✓ 價格提醒通知</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>聯絡我們</h2>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="姓名" required>
+                    <input type="email" name="email" placeholder="電子郵件" required>
+                    <textarea name="message" placeholder="訊息" rows="5" required></textarea>
+                    <button type="submit">送出</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Coinfishing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
