@@ -21,9 +21,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // 取得表單數據
-    const formData = new FormData(this);
-    
     // 顯示成功訊息
     alert('感謝您的訊息！我們會盡快回覆您。');
     
@@ -32,7 +29,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 });
 
 // 滾動時導航列效果
-let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     const currentScroll = window.pageYOffset;
@@ -42,8 +38,6 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     }
-    
-    lastScroll = currentScroll;
 });
 
 // 頁面載入完成動畫
